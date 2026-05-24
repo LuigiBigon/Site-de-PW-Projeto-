@@ -1,0 +1,117 @@
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.Header {
+   display:flex;
+   flex-direction:column;
+   background-color: rgb(0, 0, 0);
+   width: 100%;
+   position:fixed;
+   top:0;
+   z-index:100; /* coloquei o z-index:100  aqui para que o header sobreponha quaisquer próximos itens que eu colocar */
+}
+
+
+#Título {
+  display:flex;
+  flex-direction:row;
+  align-items:center ;
+  justify-content:center ;
+  color: white;
+  border: 20px, red;
+  
+}
+
+
+#Nav {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
+}
+
+#Nav a:hover {/* o hover serve pra ver quando o mouse passa por cima do lugar determinado, nesse caso o a(links) dentro do Nav */
+  color: rgb(41, 121, 233); /* define a cor que vai estar no lugar determinado enquanto o mouse estiver sobre ele */
+  text-decoration: underline; /* faz com que quando o mouse passe por cima dos links apareça sublinhado */
+  transition: 0.5s color ease; /* faz a transição quando passa o mouse por cima, o "ease" deixa ela mais suave*/
+}
+
+a {
+
+text-decoration: none; /* faz com que não tenha sublinhado abaixo dos links */
+color: white;
+
+}
+
+main {
+  padding:2rem;
+  margin-top:5rem;
+}
+
+section {
+  min-height: 50vh;
+  padding: 2rem 0;
+  scroll-margin-top: 5rem ;
+  border-bottom:1px solid black;
+}
+
+
+#z-index1 {    
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center;
+  border-bottom: none; /* tive que tirar a borda dessa section porque já havia a borda da section "home" */
+  max-width:40rem; /* define a largura máxima da section como 40 vezes o tamanho da fonte da raiz*/
+  min-height:auto;
+  margin: 2rem auto 0;
+  position:relative;
+  
+
+}
+
+#java {
+  height:30vh;
+  width:20vw;
+  position:absolute;
+  transform: translate(-50%,-20%);
+  z-index: 1;
+  opacity: 0.5; /* opacidade na imagem para facilitar a leitura */
+}
+
+
+#linguagem {
+  position:relative;
+  z-index: 2;
+}
+
+
+#txt_java {
+  position:relative;
+  z-index: 2;
+}
+
+
+body {
+
+  background: white;
+  padding: 0px;
+  margin: 0px;
+  
+  
+}
+
+
+#footer {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(128, 124, 124);
+  height: 250px;
+  
+}
+
