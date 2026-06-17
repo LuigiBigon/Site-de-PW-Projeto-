@@ -17,7 +17,7 @@ html {
    position:fixed;
    top:0;
    z-index:100; /* coloquei o z-index:100  aqui para que o header sobreponha quaisquer próximos itens que eu colocar */
-   font-size:0.9em;
+   font-size:0.9rem;
    
 }
 
@@ -43,10 +43,11 @@ html {
   align-items:center ;
   color: rgb(255, 255, 255);
   margin-left:20px;
+  background-color: rgb(46, 192, 14);
   
 }
 
-
+/* IMAGEM JAVA DENTRO DO TÍTULO */
 #java {
   height:100px;
   width:130px;  
@@ -107,26 +108,20 @@ article {
   border-bottom:1px solid black;
 }
 
-/* IMAGEM JAVA */
-
-#z-index1 {    
-  display: flex;
-  flex-direction: column;  
-  align-items: center;
-  justify-content: center;
-  border-bottom: none; /* tive que tirar a borda dessa section porque já havia a borda da section "home" */
-  max-width:40rem; /* define a largura máxima da section como 40 vezes o tamanho da fonte da raiz*/
-  min-height:auto;
-  margin: 2rem auto 0;
-  position:relative;
-  
-
-}
-
 
 /* SEÇÕES */
 
+.p_java {
+  font-size: 1.1rem;;
+  width:90%; /* define que a largura vai ser noventa por cento do espaço disponivel*/
+  max-width:1000px;; /* o max-width serve para que a partir do momento que o valor da largura for maior ou igual a mil ele fixe no mil,ficando melhor para celular*/
+  margin: 0 auto; /*centraliza o texto, não alterando em cima e em baixo e divide o valor que sobrou de espaço na largura e distribui ele */
+  line-height: 1.5; /* aumenta o espaçamento entre as linhs, fazendo com que a leitura fique melhor */
+}
 
+h2 {
+  margin-left: 2rem;
+}
 
 
 /* CORPO */
