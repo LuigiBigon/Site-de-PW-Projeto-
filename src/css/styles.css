@@ -1,7 +1,7 @@
 
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* faz com que o scroll do site seja suave */
   font-size:17px;
 }
 
@@ -14,7 +14,7 @@ html {
    background-color: rgb(58, 117, 176);
    width: 100%;
    height: 150px;
-   position:fixed;
+   position:fixed; /* fixa a posição do header,tirando ele do fluxo normal dos elementos */
    top:0;
    z-index:100; /* coloquei o z-index:100  aqui para que o header sobreponha quaisquer próximos itens que eu colocar */
    font-size:0.9rem;
@@ -25,7 +25,7 @@ html {
 #sub-header{
   display: flex;
   flex-direction: row;
-  gap: 20%;
+  gap: 20%; /*espaçamento de 20% do tamanho do header, em relação a div que guarda a imagem do java */
   justify-content: left;
   align-items: center;
   height: 100px;
@@ -52,18 +52,19 @@ html {
   height:100px;
   width:130px;  
   z-index: 1;
-  position:relative;
+  display: flex;
+  flex-direction: row;
   align-items:center;
   justify-content: center;
-  padding-left:20px;
-  background-color: blue;
+  background-color: rgb(163, 163, 238);
   
 }
 
 #java img {
 
-  height: 100%;
-  width: auto;
+  height: 50%;
+  width: auto; /* ajusta a largura para a imagem nao ser esticada ou achatada, com base no valor da altura*/
+  
 }
 
 
@@ -104,7 +105,7 @@ main {
 article {
   min-height: 50vh;
   padding: 2rem 0;
-  scroll-margin-top: 180px;
+  scroll-margin-top: 180px; /* para de scrollar com uma distância mínima de 180px do topo dos articles */
   border-bottom:1px solid black;
 }
 
@@ -140,8 +141,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(128, 124, 124);
-  height: 250px;
+  background-color: rgb(124, 124, 128);
+  height: 180px;
+  font-family:"Open Sans",sans-serif;
   
 }
 
