@@ -11,7 +11,7 @@ html {
    display:flex;
    flex-direction:column;
    justify-content: space-around;
-   background-color: rgb(58, 117, 176);
+   background-color: rgb(93, 146, 199);
    width: 100%;
    height: 150px;
    position:fixed; /* fixa a posição do header,tirando ele do fluxo normal dos elementos */
@@ -30,7 +30,7 @@ html {
   align-items: center;
   height: 100px;
   width: 100%;
-  background-color: brown;
+  
   
 }
 
@@ -41,9 +41,9 @@ html {
   display:flex;
   flex-direction:row;
   align-items:center ;
+  justify-content: center;
   color: rgb(255, 255, 255);
-  margin-left:20px;
-  background-color: rgb(46, 192, 14);
+ 
   
 }
 
@@ -56,11 +56,11 @@ html {
   flex-direction: row;
   align-items:center;
   justify-content: center;
-  background-color: rgb(163, 163, 238);
+ 
   
 }
 
-#java img {
+#java_img {
 
   height: 50%;
   width: auto; /* ajusta a largura para a imagem nao ser esticada ou achatada, com base no valor da altura*/
@@ -70,38 +70,44 @@ html {
 
 /* NAV */
 
+a {
+
+text-decoration: none; /* faz com que não tenha sublinhado abaixo dos links */
+color: rgb(255, 255, 255);
+transition: 0.5s all ease; /* faz a transição quando passa o mouse por cima, o "ease" deixa ela mais suave*/
+}
+
+
 #Nav {
      display: flex;
      flex-direction: row;
      align-items: center;
      justify-content: space-around;
+     font-size:1rem;
+     
 }
 
 #Nav a:hover {/* o hover serve pra ver quando o mouse passa por cima do lugar determinado, nesse caso o a(links) dentro do Nav */
-  color: rgb(27, 10, 120); /* define a cor que vai estar no lugar determinado enquanto o mouse estiver sobre ele */
+  color: rgb(238, 180, 47); /* define a cor que vai estar no lugar determinado enquanto o mouse estiver sobre ele */
   text-decoration:underline; /* faz com que quando o mouse passe por cima dos links apareça sublinhado */
-  transition: 0.5s color ease; /* faz a transição quando passa o mouse por cima, o "ease" deixa ela mais suave*/
+  font-size:1.1rem;
 }
 
-a {
 
-text-decoration: none; /* faz com que não tenha sublinhado abaixo dos links */
-color: rgb(255, 255, 255);
-
-}
 
 /* MAIN */
 
 main {
   padding:2rem;
-  margin-top: 180px;
+  margin-top: 100px;
 
 }
 
 #home {
   margin-top:5rem;
 }
-/* CONFIGURAÇÃO GERAL DO SECTION */
+
+/* CONFIGURAÇÃO GERAL DOS ARTICLES */
 article {
   min-height: 50vh;
   padding: 2rem 0;
@@ -110,14 +116,20 @@ article {
 }
 
 
-/* SEÇÕES */
-
 .p_java {
-  font-size: 1.1rem;;
+  font-size: 1.1rem;
   width:90%; /* define que a largura vai ser noventa por cento do espaço disponivel*/
-  max-width:1000px;; /* o max-width serve para que a partir do momento que o valor da largura for maior ou igual a mil ele fixe no mil,ficando melhor para celular*/
+  max-width:1000px;/* o max-width serve para que a partir do momento que o valor da largura for maior ou igual a mil ele fixe no mil,ficando melhor para celular*/
   margin: 0 auto; /*centraliza o texto, não alterando em cima e em baixo e divide o valor que sobrou de espaço na largura e distribui ele */
   line-height: 1.5; /* aumenta o espaçamento entre as linhs, fazendo com que a leitura fique melhor */
+}
+
+#definicao {
+  min-height:40vh;
+}
+
+#sintaxe {
+  min-height: 40vh;
 }
 
 h2 {
@@ -147,3 +159,31 @@ body {
   
 }
 
+@media (max-width: 768px ) {
+
+#java {
+  height:75px;
+  width:90px;
+}
+
+
+  #Título {
+  font-size:0.9rem;
+  width:95%;
+}
+
+#sub-header {
+  gap:0%; /* tira o gap que estava atrapalhando o título no celular */
+
+}
+
+#Nav {
+  font-size:0.8rem;
+}
+
+#footer {
+  font-size:0.8rem
+}
+
+
+}
